@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Cabin:wght@400;500&family=Cinzel+Decorative&family=Herr+Von+Muellerhoff&family=Pacifico&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.916);
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.539);
+    position: fixed;
+    width: 100%;
+    height: 11%;
+    color: bisque;
+    z-index: 2;
+}
+
+#page-name {
+    font-family: "pacifico", sans-serif;
+    position: fixed;
+    color: rgb(3, 104, 235);
+    background-color: rgba(255, 228, 196, 0);
+    border-radius: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0;
+    left: 2%;
+}
+
+nav {
+    position: absolute;
+    width: 50%;
+    font-size: small;
+    background-color: '';
+    margin-top: 1%;
+    margin-left: 45%;
+}
+
+.nav-item {
+    background-color: rgba(255, 228, 196, 0);
+    font-family: 'Cabin', sans-serif;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.nav-item:hover {
+    background-color: #f7ecec;
+    transition: all .2s ease-out;
+}
+
+
+.container-fluid {
+    position: absolute;
+    margin-top: 20%;
+}
+
+.container-fluid,
+p {
+    text-align: center;
+    font-family: "Cabin", sans-serif;
+}
+
+.carousel-caption {
+    background: rgba(48, 73, 254, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(48, 73, 254, 0.37);
+    width: 25%;
+    left: 38%;
+    color: bisque;
+}
+
+#main-title {
+    font-family: "pacifico", sans-serif;
+    font-weight: bold;
+    color: rgb(3, 104, 235);
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    margin: 1%;
+    left: 1.4%;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(64, 73, 242, 0.61);
+    font-family: "Cabin", sans-serif;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    width: auto;
+    height: auto;
+    font-size: x-small;
+    transition: .2s ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.btn-primary:hover::after {
+    transform: translate(0, 0);
+}
+.btn-primary:hover {
+    border: 1px solid rgb(3, 104, 235);
+    background-color: white;
+    color: rgb(3, 104, 235);
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.footer {
+    width: 100%;
+    height: 480px;
+    margin-top: 30px;
+    background-color: rgb(3, 104, 235);
+    margin-bottom: 0;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-list .list-item , .list-link {
+    padding: 8px 0;
+    color: #fff;
+    font-family: "Cabin", sans-serif;
+    list-style: none;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: azure;
+        border-radius: 5px;
+        color: rgb(3, 104, 235);
+        width: auto;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.musicalize {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    font-family: "pacifico",sans-serif; 
+    color: azure; 
+}
+
+.footer-info, .footer-copy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cabin", sans-serif;
+    color: azure;
+}
+
+.credits , a{
+    font-family: "Cabin", sans-serif;
+    color: azure;
+    text-decoration: none;
+
+    &:hover {
+        color: yellow;
+    }
+}
+
+/*Media query*/
+
+@media screen and (max-width: 768px) {
+
+    #page-name {
+        font-size: 2rem;
+    }
+
+    .card {
+        display: -ms-inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: .5rem;
+    }
+
+    .card-title {
+        font-size: .6rem;
+    }
+
+    .nav-item {
+        width: 50px;
+    }
+
+    .nav .nav-link{
+        font-size: .5rem;
+        color: white;
+    }
+
+    .footer-list {
+        font-size: .7rem;
+    }
+
+    .footer-info,
+    .footer-copy, .credits {
+        font-size: .7rem;
+    }
+}
