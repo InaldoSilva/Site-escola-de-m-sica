@@ -8,6 +8,7 @@
 
 body {
     background-color: rgba(255, 255, 255, 0.916);
+    overflow-x: hidden;
 }
 
 header {
@@ -47,8 +48,9 @@ nav {
     border-radius: 10px;
 }
 
-.nav-item:hover {
+.nav-item .nav-link:hover {
     background-color: #f7ecec;
+    color: rgb(3, 104, 235);
     transition: all .2s ease-out;
 }
 
@@ -117,52 +119,40 @@ p {
 .btn-primary:hover::after {
     transform: translate(0, 0);
 }
-.btn-primary:hover {
+.btn-primary:hover  {
     border: 1px solid rgb(3, 104, 235);
-    background-color: white;
+    background-color: rgb(48, 81, 130);
     color: rgb(3, 104, 235);
     transform: scale(1.05);
     will-change: transform;
 }
 
-.footer {
+footer {
     width: 100%;
-    height: 480px;
+    height: 500px;
     margin-top: 30px;
     background-color: rgb(3, 104, 235);
     margin-bottom: 0;
 }
 
-.footer-list {
+.footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer-list .list-item , .list-link {
-    padding: 8px 0;
-    color: #fff;
-    font-family: "Cabin", sans-serif;
-    list-style: none;
-    text-decoration: none;
-
-    &:hover {
-        cursor: pointer;
-        background-color: azure;
-        border-radius: 5px;
-        color: rgb(3, 104, 235);
-        width: auto;
-    }
-}
 
 .social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 20px;
-    padding: 18px 0;
+    position: relative;
+    left: 46%;
+    top: 56%;
+}
+.social-icon > img {
+    transition: .5s ease-in-out;
+}
+.social-icon > img:hover {
+    rotate: 1turn;
 }
 
 .musicalize {
@@ -172,6 +162,7 @@ p {
     align-items: center;  
     font-family: "pacifico",sans-serif; 
     color: azure; 
+    margin: 24% 0 0 0;
 }
 
 .footer-info, .footer-copy {
